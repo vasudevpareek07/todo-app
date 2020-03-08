@@ -1,0 +1,25 @@
+<div class="todo-dashboard-parent flex-column">
+    <div class="header flex-item-fixed">
+        TODO APP!
+    </div>
+    <div class="content flex-item-balloon flex-column">
+        <div class="flex-row outer-container">
+            <div class="flex-item-balloon inner-container">
+                <div class="column-header">Add Task</div>
+                <app-add-item (taskToBeAdded)="addTask($event)"></app-add-item>
+            </div>
+            <div class="flex-item-balloon inner-container flex-column">
+                <div class="flex-item-fixed">
+                    <div class="column-header">Pending Tasks</div>
+                </div>
+                <div class="flex-item-balloon overflow-y-auto">
+                    <app-todo-list [allPendingTasks]="allPendingTasks"></app-todo-list>
+                </div>
+            </div>
+            <div class="flex-item-balloon inner-container">
+                <div class="column-header">Completed Tasks</div>
+                <app-completed-list [allCompletedTasks]="allCompletedTasks"></app-completed-list>
+            </div>
+          </div>
+    </div>
+</div>

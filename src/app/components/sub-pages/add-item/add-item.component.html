@@ -1,0 +1,4 @@
+<input type="text" class="input-field-control" placeholder="Enter Task Name" [(ngModel)]="taskObj.text">
+<div [class.disable-btn] = "taskObj.text.length == 0">
+    <button (click)="addTask()" class="btn-block wide-div">ADD TASK</button>
+</div>

@@ -1,0 +1,39 @@
+
+<ng-container *ngIf="editMode; else viewMode">
+    <div class="task-card">
+        <input type="text" class="input-field-control" [(ngModel)]="editedTask">
+        <div class="flex-row justify-end">
+          <div class="flex-item-fixed">
+              <button class="btn-block mr-md" (click)="onCancel()">Cancel</button>
+          </div>
+          <div class="flex-item-fixed">
+             <button class="btn-block mr-md" (click)="onSave()">Save</button>
+          </div>
+          <div class="flex-item-fixed">
+              <button class="btn-block" (click)="onDelete(task)">Delete</button>
+          </div>
+        </div>
+    </div>    
+</ng-container>
+
+
+<ng-template #viewMode>
+    <div class="task-card">
+        <div class="flex-row mb-md">
+            <div class="flex-item-fixed mr-md">
+                <input type="checkbox" class="input-field-control checkbox-block" [ngModel]="task.isCompleted" (ngModelChange)="onTaskStatusChange(task, $event)">
+            </div>
+            <div class="flex-item-balloon">
+                <p [style.text-decoration]="task.isCompleted ? 'line-through' : 'normal'" class="task-text">{{task.text}}</p>
+            </div>
+        </div>
+        <div class="flex-row justify-end">
+            <div class="flex-item-fixed">
+                <button class="btn-block mr-md" (click)="editMode = true">Edit</button>
+            </div>
+            <div class="flex-item-fixed">
+                <button class="btn-block" (click)="onDelete(task)">Delete</button>
+            </div>
+        </div>
+    </div>    
+</ng-template> 

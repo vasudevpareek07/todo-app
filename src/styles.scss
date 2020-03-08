@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+//common styles
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item-fixed{
+    flex: 0 0 auto;
+}
+
+.flex-item-balloon{
+    flex: 1 1 0;
+}
+
+.wide-div{
+    width: 100%;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.justify-end{
+    justify-content: flex-end;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.mr-md{
+    margin-right: 12px;
+}
+
+.mb-md{
+    margin-bottom: 12px;
+}
+
+.overflow-y-auto{
+    overflow-y: auto;
+}
+
+.btn-block{
+    background-color: crimson;
+    border-radius: 3px;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+}
+
+.input-field-control{
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 24px;
+}
+
+
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;
+}
