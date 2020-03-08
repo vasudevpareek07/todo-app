@@ -26,7 +26,7 @@ describe('TodoDashboardComponent', () => {
 
     beforeEach(async(() => {
 
-        const spy = jasmine.createSpyObj('TaskService', ['getTaskToBeDeleted', 'getTaskToBeCompleted', 'getTaskToBeUndoCompleted']);
+        const spy = jasmine.createSpy('TaskService');
 
         TestBed.configureTestingModule({
             imports: [ FormsModule ],
@@ -45,12 +45,6 @@ describe('TodoDashboardComponent', () => {
         taskServiceSpy.undoCompleteTask = new Subject<TaskDetails>();
 
         taskServiceSpy.deleteTask = new Subject<TaskDetails>();
-
-        // taskServiceSpy.getTaskToBeCompleted.and.returnValue(of(taskData));
-
-        // taskServiceSpy.getTaskToBeUndoCompleted.and.returnValue(of(taskData));
-
-        // taskServiceSpy.getTaskToBeDeleted.and.returnValue(of(taskData));
 
     }));
 

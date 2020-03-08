@@ -22,7 +22,7 @@ describe('TaskElementComponent', () => {
 
     beforeEach(async(() => {
 
-        const spy = jasmine.createSpyObj('TaskService', ['getTaskToBeDeleted', 'getTaskToBeCompleted', 'getTaskToBeUndoCompleted']);
+        const spy = jasmine.createSpy('TaskService');
         
         TestBed.configureTestingModule({
             imports: [FormsModule],
